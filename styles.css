@@ -1,0 +1,169 @@
+/*-------------------------Responsive setting-------------------------------*/
+@media screen and (min-width: 700px) {
+    body {
+        width: 40%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        border: 1px solid grey;
+        font-size: 0.8em;
+        min-width: 700px;
+    }
+    #summary h1, #summary h1+p {
+        display: none;
+    }
+    #desc h1 {
+        margin: 5px 0 0 0;
+    }
+}
+@media screen and (max-width: 699px) {
+    #desc h1, #desc h1+p {
+        display: none;
+    }
+    #summary h1 {
+        margin: 20px 0 0 0;
+    }
+    #summary h1+p, #summary h1 {
+        text-align: center;
+    }
+    #summary img {
+        margin-top: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+/*-------------------------------CSS global----------------------------------------------------------------------*/
+
+#summary ul>li, #stage_content ul>li, #experiences_content div:nth-of-type(odd) ul>li, 
+#recommendations_content ul>li {
+    list-style-type: none;
+}
+#summary ul, #stage_content ul, #experiences_content div:nth-of-type(odd) ul,
+#recommendations_content ul {
+    padding-inline-start: 0px;
+    margin: 0;
+}
+#desc h1, #summary h1 {
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: -2px;
+    word-spacing: -7px;
+    font-weight: lighter;
+}
+#desc h1+p, #summary h1+p {
+    margin: 0 0 30px 0;
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+/*-------------------------------CSS summary-------------------------------------*/
+#summary {
+    background-color: rgb(190, 178, 2);
+    color: rgb(56, 56, 56);
+}
+#summary img {
+    width: 60%;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid rgb(0, 29, 0);
+}
+#summary h2 {
+    background-color: rgb(56, 56, 56);
+    padding: 5px 0;
+    color:   rgb(190, 178, 2);
+    display: block;
+    text-align: center;
+}
+#summary>div {
+    text-align: center;
+    margin-top: 40px;
+}
+#summary ul, #summary section:nth-of-type(2) p, #hobbies_content {
+    padding: 0 15px;
+}
+#summary section:nth-of-type(2) p {
+    text-align: justify;
+    margin-bottom: 200px;
+}
+#summary ul p {
+    margin: 1px;
+}
+#summary ul>li {
+    margin-bottom: 10px;
+}
+#hobbies_content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-bottom: 20px;
+    justify-items: center;
+}
+#hobbies_content i {
+    border: 1px solid black;
+    border-radius: 50%;
+    font-size: 1.6em;
+    padding: 5px;
+}
+/*--------------------END of summary part---------------------------------------
+--------------------------------------------------------------------------------
+----------------------CSS Profil part------------------------------------------*/ 
+#desc {
+    padding: 20px;
+}
+#desc h1 strong, #desc section i {
+    color:   rgb(190, 178, 2);
+}
+#desc h2 {
+    border-bottom: 2px solid rgb(190, 178, 2);
+    padding-bottom: 5px;
+}
+#desc h2 i {
+    font-size: 1.2em;
+    padding-right: 20px;
+}
+#desc h3, #desc h4, #desc p,
+#recommendations_content ul>li:nth-child(1){
+    margin: 0 0 5px 0;
+}
+#desc h3 {
+    font-size: 1.5em;
+    letter-spacing: -1px;
+}
+#desc h4 {
+    font-weight: lighter;
+}
+#stage_content, #experiences_content {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-row-gap: 10px;  
+}
+#experiences_content div:nth-of-type(even) ul {
+    padding-inline-start: 20px;
+    margin: 0;
+}
+.fa-circle {
+    position: relative;
+    top: -2px;
+    font-size: 0.6em;
+}
+#desc section>div ul li strong, .smallPoint, .bigPoint {
+    font-weight: bold;
+}
+#desc section>div ul li strong{
+    margin-left: 10px;
+}
+.smallPoint {
+    padding-left: 18px;
+}
+.bigPoint {
+    padding-left: 23px;
+}
+#recommendations_content ul {
+    width: 30%;
+    margin: auto;
+}
+
