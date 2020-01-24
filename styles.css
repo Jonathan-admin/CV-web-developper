@@ -1,57 +1,8 @@
-/*-------------------------Responsive setting-------------------------------*/
-@media screen and (min-width: 700px) {
-    body {
-        width: 40%;
-        margin: auto;
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        border: 1px solid grey;
-        font-size: 0.8em;
-        min-width: 700px;
-    }
-    #summary h1, #summary h1+p {
-        display: none;
-    }
-    #desc h1 {
-        margin: 5px 0 0 0;
-    }
-    #summary section:nth-of-type(2) p {
-        margin-bottom: 200px;
-    }
-}
-@media screen and (max-width: 699px) {
-    #desc h1, #desc h1+p {
-        display: none;
-    }
-    #summary h1 {
-        margin: 20px 0 0 0;
-    }
-    #summary h1+p, #summary h1 {
-        text-align: center;
-    }
-    #summary img {
-        margin-top: 20px;
-    }
-    #summary ul {
-        display: flex;
-        flex-flow: row wrap;
-        word-wrap: break-word;
-    }
-    #summary ul li {
-        width: 40%;
-        flex-flow: row wrap;
-    }
-    #summary ul li:nth-child(even) {
-        padding-left: 40px;
-    }
-}
 
-
-
-
-
-
-
+/*
+                   ______________
+                    CSS CV file 
+                   ______________                                                                 */
 
 /*-------------------------------CSS global----------------------------------------------------------------------*/
 
@@ -181,3 +132,58 @@
     margin: auto;
 }
 /*-----------------------end of profil part-------------------------------------------------*/
+
+/*-------------------------Responsive setting-------------------------------*/
+@media screen and (min-width: 700px) {
+    body {
+        width: 40%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        border: 1px solid grey;
+        font-size: 0.8em;
+        min-width: 700px;
+    }
+    #summary h1, #summary h1+p {
+        display: none;
+    }
+    #desc h1 {
+        margin: 5px 0 0 0;
+    }
+    #summary section:nth-of-type(2) p {
+        margin-bottom: 200px;
+    }
+}
+@media screen and (max-width: 699px) {
+    #desc h1, #desc h1+p {
+        display: none;
+    }
+    #summary h1 {
+        margin: 20px 0 0 0;
+    }
+    #summary h1+p, #summary h1 {
+        text-align: center;
+    }
+    #summary img {
+        margin-top: 20px;
+    }
+    #summary ul {
+        display: flex;
+        flex-flow: row wrap;
+        word-wrap: break-word;
+    }
+    #summary ul li {
+        width: 40%;
+        flex-flow: row wrap;
+    }
+    #summary ul li:nth-child(even) {
+        padding-left: 40px;
+    }
+    #desc h2, #desc h3 {
+        font-size: 20px; 
+    }
+    #recommendations_content ul {
+        width: 40%;
+    }
+}
+/*---------------------------End of CSS CV file----------------------------------------------*/
