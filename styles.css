@@ -27,10 +27,16 @@
     font-size: 1.5em;
     font-weight: bolder;
 }
+#desc h1 strong, #desc section i, .liner, #summary h2 {
+    color:   rgb(190, 178, 2);
+}
+#summary, #desc {
+    color: rgb(54, 54, 54);
+}
 /*-------------------------------CSS summary-------------------------------------*/
 #summary {
     background-color: rgb(190, 178, 2);
-    color: rgb(56, 56, 56);
+
 }
 #summary img {
     width: 60%;
@@ -41,7 +47,6 @@
 #summary h2 {
     background-color: rgb(56, 56, 56);
     padding: 5px 0;
-    color:   rgb(190, 178, 2);
     display: block;
     text-align: center;
 }
@@ -78,9 +83,6 @@
 ----------------------CSS Profil part------------------------------------------*/ 
 #desc {
     padding: 20px;
-}
-#desc h1 strong, #desc section i {
-    color:   rgb(190, 178, 2);
 }
 #desc h2 {
     border-bottom: 2px solid rgb(190, 178, 2);
@@ -131,6 +133,13 @@
     width: 30%;
     margin: auto;
 }
+.liner {
+    width: 12%;
+    border-top-width: 1px;
+    border-top-style: solid;
+    position: relative;
+    top: -30px;
+}
 /*-----------------------end of profil part-------------------------------------------------*/
 
 /*-------------------------Responsive setting-------------------------------*/
@@ -155,7 +164,7 @@
     }
 }
 @media screen and (max-width: 699px) {
-    #desc h1, #desc h1+p {
+    #desc h1, #desc h1+p, #summary .liner {
         display: none;
     }
     #summary h1 {
