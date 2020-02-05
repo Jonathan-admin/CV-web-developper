@@ -12,7 +12,7 @@
 }
 #summary ul, #stage_content ul, #experiences_content div:nth-of-type(odd) ul,
 #recommendations_content ul {
-    padding-inline-start: 0px;
+    padding-left: 0px;
     margin: 0;
 }
 #desc h1, #summary h1 {
@@ -28,21 +28,20 @@
     font-weight: bolder;
 }
 #desc h1 strong, #desc section i, .liner, #summary h2 {
-    color:   rgb(190, 178, 2);
+    color: rgba(129,199,132 ,1);
 }
 #summary, #desc {
     color: rgb(54, 54, 54);
 }
 /*-------------------------------CSS summary-------------------------------------*/
 #summary {
-    background-color: rgb(190, 178, 2);
-
+    background-color: rgba(129, 199, 132, 1.00);
 }
 #summary img {
-    width: 60%;
-    height: auto;
-    border-radius: 50%;
-    border: 2px solid rgb(0, 29, 0);
+	width: 60%;
+	height: auto;
+	border-radius: 50%;
+	border: 2px solid rgba(1, 88, 8, 0.60);
 }
 #summary h2 {
     background-color: rgb(56, 56, 56);
@@ -60,6 +59,9 @@
 #summary section:nth-of-type(2) p {
     text-align: justify;
 }
+#summary ul {
+    font-weight: bold;
+}
 #summary ul p {
     margin: 1px;
 }
@@ -73,10 +75,10 @@
     justify-items: center;
 }
 #hobbies_content i {
-    border: 1px solid black;
-    border-radius: 50%;
-    font-size: 1.6em;
-    padding: 5px;
+	border: 1px solid black;
+	border-radius: 50%;
+	font-size: 1.6em;
+	padding: 5px;
 }
 /*--------------------END of summary part---------------------------------------
 --------------------------------------------------------------------------------
@@ -85,7 +87,7 @@
     padding: 20px;
 }
 #desc h2 {
-    border-bottom: 2px solid rgb(190, 178, 2);
+    border-bottom: 2px solid rgba(129,199,132 ,1);
     padding-bottom: 5px;
 }
 #desc h2 i {
@@ -109,7 +111,7 @@
     grid-row-gap: 10px;  
 }
 #experiences_content div:nth-of-type(even) ul {
-    padding-inline-start: 20px;
+    padding-left: 20px;
     margin: 0;
 }
 .fa-circle {
@@ -127,14 +129,17 @@
     padding-left: 18px;
 }
 .bigPoint {
-    padding-left: 23px;
+    padding-left: 26px;
 }
 #recommendations_content ul {
-    width: 30%;
+    width: 35%;
     margin: auto;
 }
+#recommendations_content ul li:nth-child(-n+3) {
+    font-weight: bold; 
+}
 .liner {
-    width: 12%;
+    width: 11.5%;
     border-top-width: 1px;
     border-top-style: solid;
     position: relative;
@@ -143,7 +148,7 @@
 /*-----------------------end of profil part-------------------------------------------------*/
 
 /*-------------------------Responsive setting-------------------------------*/
-@media screen and (min-width: 700px) {
+@media all and (min-width: 1024px) {
     body {
         width: 40%;
         margin: auto;
@@ -162,8 +167,17 @@
     #summary section:nth-of-type(2) p {
         margin-bottom: 200px;
     }
+    .bigPoint {
+        padding-left: 23px;
+    }
 }
-@media screen and (max-width: 699px) {
+@media all and (max-width: 1023px) {
+    body {
+        min-width: 350px;
+    }
+    #summary {
+        border: 2px inset rgb(54, 54, 54);
+    }
     #desc h1, #desc h1+p, #summary .liner {
         display: none;
     }
@@ -182,17 +196,38 @@
         word-wrap: break-word;
     }
     #summary ul li {
-        width: 40%;
         flex-flow: row wrap;
     }
-    #summary ul li:nth-child(even) {
-        padding-left: 40px;
+    #summary ul li:nth-child(odd) {
+        width: 70%;
+        padding-right: 10px;
     }
     #desc h2, #desc h3 {
         font-size: 20px; 
     }
     #recommendations_content ul {
         width: 40%;
+    }
+}
+@media all and (max-width: 470px) {
+    #desc section>div ul li strong, .smallPoint, .bigPoint {
+        font-size: 0.9em;
+        min-width: 80px;
+    }
+    #desc h2, #recommendations_content ul {
+        font-size: 15px;
+    }
+    #recommendations_content ul {
+        width: 70%;
+    }
+    #summary ul li:nth-child(odd) {
+        width: 100%;
+    }
+    #summary h1+p {
+        font-size: 1.2em;
+    }
+    #summary h1 {
+        font-size: 35px;
     }
 }
 /*---------------------------End of CSS CV file----------------------------------------------*/
