@@ -1,0 +1,252 @@
+
+/*_____________
+                                CSS CV file 
+                            __________________                                                                 */
+/*-------------------------------CSS global----------------------------------------------------------------------*/
+ul:not(.list)>li {
+    list-style-type: none;
+}
+
+main ul:not(.list) {
+    padding-left: 0;
+    margin: 0;
+}
+
+.list {
+    padding-left: 20px;
+    margin: 0
+}
+
+main>p {
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: lighter;
+}
+
+h1 {
+    margin: 0 0 60px 0;
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+
+main>p strong, main section i, .liner, aside h2 {
+    color: rgba(129,199,132 ,1);
+}
+
+aside, main {
+    color: rgb(54, 54, 54);   /* text color */
+}
+
+.data-contact, strong, .smallPoint, .bigPoint,
+#recommendations_content>li:nth-child(-n+3) {
+    font-weight: bold;
+}
+
+/*-------------------------------CSS aside-------------------------------------*/
+aside, header {
+    background-color: rgba(129, 199, 132, 1.00); /*aside color */
+    text-align: center;
+}
+
+aside img {
+	width: 60%;
+	height: auto;
+	border-radius: 50%;
+    border: 2px solid rgba(1, 88, 8, 0.60);
+    margin-top: 40px;
+}
+
+aside h2:not(.function) {
+    background-color: rgb(56, 56, 56);
+    padding: 5px 0;
+}
+
+aside ul, aside section:nth-of-type(2) p {
+    padding: 0 15px;
+    text-align: left;
+}
+
+aside section:nth-of-type(2) p {
+    text-align: justify;
+}
+
+aside ul p {
+    margin: 1px;
+}
+
+aside ul>li {
+    margin-bottom: 10px;
+}
+
+#hobbies_content {
+    display: flex;
+    padding-bottom: 20px;
+    justify-content: space-around;
+}
+
+#hobbies_content i {
+	border: 1px solid black;
+	border-radius: 50%;
+	font-size: 1.6em;
+	padding: 7px;
+}
+
+/*--------------------END of aside part---------------------------------------
+--------------------------------------------------------------------------------
+----------------------CSS Profil part------------------------------------------*/ 
+main {
+    padding: 20px;
+}
+
+main h2 {
+    border-bottom: 2px solid rgba(129,199,132 ,1);
+    padding-bottom: 5px;
+}
+
+main h2 i {
+    font-size: 1.2em;
+    padding-right: 20px;
+}
+
+h3, h3+p, main p,
+#recommendations_content>li:nth-child(1) {
+    margin: 0 0 5px 0;
+}
+
+main h3 {
+    font-size: 1.5em;
+}
+
+#stage_content, #experiences_content {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-row-gap: 10px;  
+}
+
+.fa-circle {
+    position: relative;
+    top: -2px;
+    font-size: 0.6em;
+}
+
+main ul>li strong{
+    margin-left: 10px;
+}
+
+.smallPoint {
+    padding-left: 18px;
+}
+
+.bigPoint {
+    padding-left: 26px;
+}
+
+.liner {
+    width: 11.5%;
+    border-top-width: 1px;
+    border-top-style: solid;
+}
+
+/*-----------------------end of profil part-------------------------------------------------*/
+
+/*                          Responsive setting                                  */
+/*------------------------DESKTOP SCREENS DISPLAY-------------------------------*/
+@media all and (min-width: 1024px) {
+
+    body {
+        width: 40%;
+        margin: auto;
+        display: flex;
+        border: 1px solid grey;
+        font-size: 0.8em;
+        min-width: 700px;
+    }
+
+    aside {
+        width: 80%;
+    }
+
+    header {
+        display: none;
+    }
+
+    main h1 {
+        margin: 5px 0 0 0;
+    }
+
+    aside section:nth-of-type(2) p {
+        margin-bottom: 160px;
+    }
+
+    .bigPoint {
+        padding-left: 23px;
+    }
+
+    #recommendations_content {
+        width: 30%;
+        margin: auto;
+    }
+}
+/*------------------- TABLETTE SCREENS DISPLAY------------------------------------------*/
+@media all and (max-width: 1023px) {
+
+    body {
+        min-width: 350px;
+    }
+
+    aside, header {
+        border: 2px inset rgb(54, 54, 54);
+    }
+
+    header {
+        border-bottom: none;
+    }
+
+    aside {
+        border-top: none;
+    }
+
+    main h1, main>p, .liner {
+        display: none;
+    }
+
+    .function {
+        margin: 20px 0 0 0;
+    }
+
+    header p, .function  {
+        font-size: 5vw;
+    }
+
+    aside ul {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    aside ul li:nth-child(odd) {
+        width: 70%;
+        padding-right: 10px;
+    }
+
+    main h2, main h3 {
+        font-size: 20px; 
+    }
+
+    #recommendations_content {
+        width: 55%;
+        margin: auto;
+    }
+}
+/*---------------- MOBILES SCREENS DISPLAY----------------------------------------*/
+@media all and (max-width: 470px) {
+
+    main section>div ul li strong, .smallPoint, .bigPoint {
+        font-size: 0.9em;
+        min-width: 80px;
+    }
+
+    main h2, main h3 {
+        font-size: 15px; 
+    }
+}
+/*---------------------------End of CSS CV file----------------------------------------------*/
