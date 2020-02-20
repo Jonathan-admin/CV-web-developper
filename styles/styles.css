@@ -7,7 +7,7 @@ ul:not(.list)>li {
     list-style-type: none;
 }
 
-main ul:not(.list) {
+main ul:not(.list), main section p, h1, h3 {
     padding-left: 0;
     margin: 0;
 }
@@ -17,19 +17,19 @@ main ul:not(.list) {
     margin: 0
 }
 
-main>p {
+main>header>p {
     font-size: 40px;
     font-family: 'Courier New', Courier, monospace;
     font-weight: lighter;
+    margin: 15px 0 10px 0;
 }
 
 h1 {
-    margin: 0 0 60px 0;
     font-size: 1.5em;
     font-weight: bolder;
 }
 
-main>p strong, main section i, .liner, aside h2 {
+main>header>p strong, main section i, .liner, aside h2 {
     color: rgba(129,199,132 ,1);
 }
 
@@ -43,7 +43,7 @@ aside, main {
 }
 
 /*-------------------------------CSS aside-------------------------------------*/
-aside, header {
+aside, body>header {
     background-color: rgba(129, 199, 132, 1.00); /*aside color */
     text-align: center;
 }
@@ -94,9 +94,6 @@ aside ul>li {
 /*--------------------END of aside part---------------------------------------
 --------------------------------------------------------------------------------
 ----------------------CSS Profil part------------------------------------------*/ 
-main {
-    padding: 20px;
-}
 
 main h2 {
     border-bottom: 2px solid rgba(129,199,132 ,1);
@@ -108,19 +105,21 @@ main h2 i {
     padding-right: 20px;
 }
 
-h3, h3+p, main p,
-#recommendations_content>li:nth-child(1) {
-    margin: 0 0 5px 0;
-}
-
-main h3 {
+h3 {
     font-size: 1.5em;
 }
 
-#stage_content, #experiences_content {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-row-gap: 10px;  
+h3+p {
+    padding: 5px 0;
+}
+
+#stage_content>section, #experiences_content>section {
+    display: flex; 
+    padding-bottom: 10px;
+}
+
+section>ul {
+    min-width: 30%;
 }
 
 .fa-circle {
@@ -145,8 +144,8 @@ main ul>li strong{
     width: 11.5%;
     border-top-width: 1px;
     border-top-style: solid;
+    margin-bottom: 4vh;
 }
-
 /*-----------------------end of profil part-------------------------------------------------*/
 
 /*                          Responsive setting                                  */
@@ -154,24 +153,29 @@ main ul>li strong{
 @media all and (min-width: 1024px) {
 
     body {
-        width: 40%;
-        margin: auto;
         display: flex;
         border: 1px solid grey;
         font-size: 0.8em;
-        min-width: 700px;
+        width: 35%;
+        min-width: 750px;
+        margin: auto;
     }
 
+    main {
+        padding: 20px;
+        width: 65%;
+    }
+    
     aside {
-        width: 80%;
+        width: 35%;
     }
 
-    header {
+    section>ul {
+        min-width: 20%;
+    }
+    
+    body>header{
         display: none;
-    }
-
-    main h1 {
-        margin: 5px 0 0 0;
     }
 
     aside section:nth-of-type(2) p {
@@ -183,7 +187,7 @@ main ul>li strong{
     }
 
     #recommendations_content {
-        width: 30%;
+        width: 40%;
         margin: auto;
     }
 }
@@ -194,19 +198,20 @@ main ul>li strong{
         min-width: 350px;
     }
 
-    aside, header {
+    aside, body>header {
         border: 2px inset rgb(54, 54, 54);
     }
 
-    header {
+    body>header {
         border-bottom: none;
     }
 
     aside {
         border-top: none;
+        margin-bottom: 4vh;
     }
 
-    main h1, main>p, .liner {
+    main>header {
         display: none;
     }
 
@@ -215,7 +220,7 @@ main ul>li strong{
     }
 
     header p, .function  {
-        font-size: 5vw;
+        font-size: 6vw;
     }
 
     aside ul {
@@ -240,7 +245,7 @@ main ul>li strong{
 /*---------------- MOBILES SCREENS DISPLAY----------------------------------------*/
 @media all and (max-width: 470px) {
 
-    main section>div ul li strong, .smallPoint, .bigPoint {
+    main li strong, .smallPoint, .bigPoint {
         font-size: 0.9em;
         min-width: 80px;
     }
