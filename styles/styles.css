@@ -88,7 +88,8 @@ aside ul>li {
 	border: 1px solid black;
 	border-radius: 50%;
 	font-size: 1.6em;
-	padding: 7px;
+    padding: 7px;
+    width: 35px;
 }
 
 /*--------------------END of aside part---------------------------------------
@@ -179,7 +180,7 @@ main ul>li strong{
     }
 
     aside section:nth-of-type(2) p {
-        margin-bottom: 160px;
+        margin-bottom: 200px;
     }
 
     .bigPoint {
