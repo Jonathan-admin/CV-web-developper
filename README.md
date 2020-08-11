@@ -1,6 +1,6 @@
 # CV Développeur web
 
-## Projet 2 - Développeur web junior
+## Projet 2 BIS - Développeur web junior
 
 Il comprend:
 

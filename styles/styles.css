@@ -1,258 +1,151 @@
+/*                          Jonathan LAUBRON CV's style (css)                                */
+/*------------------------DESKTOP SCREENS DISPLAY-------------------------------*/
 
-/*_____________
-                                CSS CV file 
-                            __________________                                                                 */
-/*-------------------------------CSS global----------------------------------------------------------------------*/
-ul:not(.list)>li {
-    list-style-type: none;
+
+@font-face {
+    font-family: 'JetJaneMonoCaps_Bold';
+    src: url('../fonts/JetJaneMonoCaps_Bold.ttf');
 }
 
-main ul:not(.list), main section p, h1, h3 {
-    padding-left: 0;
-    margin: 0;
-}
-
-.list {
-    padding-left: 20px;
-    margin: 0
-}
-
-main>header>p {
-    font-size: 40px;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: lighter;
-    margin: 15px 0 10px 0;
-}
-
-h1 {
-    font-size: 1.5em;
-    font-weight: bolder;
-}
-
-main>header>p strong, main section i, .liner, aside h2 {
-    color: rgba(129,199,132 ,1);
-}
-
-aside, main {
-    color: rgb(54, 54, 54);   /* text color */
-}
-
-.data-contact, strong, .smallPoint, .bigPoint,
-#recommendations_content>li:nth-child(-n+3) {
-    font-weight: bold;
-}
-
-/*-------------------------------CSS aside-------------------------------------*/
-aside, body>header {
-    background-color: rgba(129, 199, 132, 1.00); /*aside color */
+header {
     text-align: center;
 }
-
-aside img {
-	width: 60%;
-	height: auto;
-	border-radius: 50%;
-    border: 2px solid rgba(1, 88, 8, 0.60);
-    margin-top: 40px;
+header div:nth-child(1) {
+    background-color: rgb(150,150,150);
+    height: 115px;
 }
-
-aside h2:not(.function) {
-    background-color: rgb(56, 56, 56);
-    padding: 5px 0;
+header div:nth-child(2) {
+    padding: 50px 20px 0 20px;
+    font-size: 1.5em;
 }
-
-aside ul, aside section:nth-of-type(2) p {
-    padding: 0 15px;
-    text-align: left;
+header p {
+    font-size: 1.3em;
+    letter-spacing: .4rem;
+    font-family: arial;
+    margin: 0;
 }
-
-aside section:nth-of-type(2) p {
-    text-align: justify;
+header h1 {
+    color: rgb(150,150,150);
+    font-family: "JetJaneMonoCaps_Bold";
+    font-size: 1em;
+    margin: 0;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgb(150,150,150);
 }
-
-aside ul p {
-    margin: 1px;
+header div:nth-child(1) img {
+    width: 130px;
+    height: auto;
+    border-radius: 50%;
+    position: relative;
+    top: 20px;
 }
 
 aside ul>li {
-    margin-bottom: 10px;
+    list-style-type: none;
 }
 
-#hobbies_content {
-    display: flex;
-    padding-bottom: 20px;
-    justify-content: space-around;
+aside ul {
+    padding-left: 0;
 }
 
-#hobbies_content i {
-	border: 1px solid black;
-	border-radius: 50%;
-	font-size: 1.6em;
-    padding: 7px;
-    width: 35px;
+.txt-justify {
+    text-align: justify;
 }
 
-/*--------------------END of aside part---------------------------------------
---------------------------------------------------------------------------------
-----------------------CSS Profil part------------------------------------------*/ 
-
-main h2 {
-    border-bottom: 2px solid rgba(129,199,132 ,1);
-    padding-bottom: 5px;
+main ul {
+    padding-left: 20px;
+    margin-top: 0;
 }
 
-main h2 i {
+h2 {
     font-size: 1.2em;
-    padding-right: 20px;
+}
+
+h1, h2 {
+    color: rgb(150, 150, 150);
+    font-family: "JetJaneMonoCaps_Bold";
+}
+
+aside section:nth-child(1) h2 , main section:nth-child(1) h2 {
+    margin-top: 0;
 }
 
 h3 {
-    font-size: 1.5em;
+    margin-bottom: 0;
+    font-size: 1.0em;
+}
+main p {
+    margin: 0; 
 }
 
-h3+p {
-    padding: 5px 0;
-}
 
-#stage_content>section, #experiences_content>section {
-    display: flex; 
-    padding-bottom: 10px;
-}
+/*                          Responsive rules                                  */
 
-section>ul {
-    min-width: 30%;
-}
-
-.fa-circle {
-    position: relative;
-    top: -2px;
-    font-size: 0.6em;
-}
-
-main ul>li strong{
-    margin-left: 10px;
-}
-
-.smallPoint {
-    padding-left: 18px;
-}
-
-.bigPoint {
-    padding-left: 26px;
-}
-
-.liner {
-    width: 11.5%;
-    border-top-width: 1px;
-    border-top-style: solid;
-    margin-bottom: 4vh;
-}
-/*-----------------------end of profil part-------------------------------------------------*/
-
-/*                          Responsive setting                                  */
-/*------------------------DESKTOP SCREENS DISPLAY-------------------------------*/
 @media all and (min-width: 1024px) {
-
     body {
-        display: flex;
-        border: 1px solid grey;
-        font-size: 0.8em;
-        width: 35%;
-        min-width: 750px;
+        width:44%;
+        min-width: 800px;
         margin: auto;
+        font-size: 0.9em;
+        border: 1px solid rgb(150, 150, 150);
     }
-
+    .cv-content {
+        display: flex;
+        padding: 25px 20px;
+    }
     main {
-        padding: 20px;
         width: 65%;
-    }
-    
+        padding-left: 20px;
+    }  
     aside {
         width: 35%;
-    }
-
-    section>ul {
-        min-width: 20%;
-    }
-    
-    body>header{
-        display: none;
-    }
-
-    aside section:nth-of-type(2) p {
-        margin-bottom: 200px;
-    }
-
-    .bigPoint {
-        padding-left: 23px;
-    }
-
-    #recommendations_content {
-        width: 40%;
-        margin: auto;
+        border-right: 2px solid rgb(150,150,150);
+        padding-right: 20px;
     }
 }
-/*------------------- TABLETTE SCREENS DISPLAY------------------------------------------*/
+
+@media all and (max-width: 659px) {
+    header p {
+        font-size: 0.8em;
+    }
+    header h1 {
+        font-size: 0.7em;
+        padding-top: 10px;
+    }
+}
+
 @media all and (max-width: 1023px) {
-
-    body {
-        min-width: 350px;
+    header div:nth-child(2) {
+        padding: 50px 0 0 0;
+        margin-bottom: 20px;
+    } 
+    aside p, aside ul, table {
+        padding: 0 30px;
+    } 
+    aside section:nth-child(2) p  {
+        text-align: center;
     }
-
-    aside, body>header {
-        border: 2px inset rgb(54, 54, 54);
+    main {
+        margin-top: 25px;
+        border-top: 2px solid rgb(150,150,150);
+        padding-top: 25px;
     }
+}
 
-    body>header {
-        border-bottom: none;
+@media all and (min-width: 700px) and (max-width: 1023px) {
+    .cv-content {
+        padding: 0 60px;
+    } 
+    aside p, aside ul, aside table {
+        padding: 0 0 0 100px;
+    } 
+    aside section:nth-child(2) p  {
+        text-align: right;
     }
-
-    aside {
-        border-top: none;
-        margin-bottom: 4vh;
-    }
-
-    main>header {
-        display: none;
-    }
-
-    .function {
-        margin: 20px 0 0 0;
-    }
-
-    header p, .function  {
-        font-size: 6vw;
-    }
-
-    aside ul {
-        display: flex;
-        flex-flow: row wrap;
-    }
-
-    aside ul li:nth-child(odd) {
-        width: 70%;
+    table td:nth-child(odd) {
         padding-right: 10px;
     }
-
-    main h2, main h3 {
-        font-size: 20px; 
-    }
-
-    #recommendations_content {
-        width: 55%;
-        margin: auto;
+    main section > section {
+        padding-left: 100px;
     }
 }
-/*---------------- MOBILES SCREENS DISPLAY----------------------------------------*/
-@media all and (max-width: 470px) {
-
-    main li strong, .smallPoint, .bigPoint {
-        font-size: 0.9em;
-        min-width: 80px;
-    }
-
-    main h2, main h3 {
-        font-size: 15px; 
-    }
-}
-/*---------------------------End of CSS CV file----------------------------------------------*/
