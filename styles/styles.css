@@ -78,6 +78,17 @@ main p {
     margin: 0; 
 }
 
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+a:hover {
+    color: rgb(150, 150, 150);
+    text-decoration: underline;
+}
+
+
 
 /*                          Responsive rules                                  */
 
